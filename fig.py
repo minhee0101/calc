@@ -11,11 +11,14 @@ def application(environ, start_response):
 
      x=0
      y=0
-
-     if '' not in [a,b]:
+     
+     if a.isdigit() and b.isdigit():
          a, b = int(a), int(b)
          x=a+b
          y=a*b
+     else:
+         x = -1
+         y = -1
      response_body = html % {
              'x': x,
              'y': y,
