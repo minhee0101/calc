@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.realpath(os.path.dirname(__file__)))
+
 from cgi import parse_qs
 from template import html
 
