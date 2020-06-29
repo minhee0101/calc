@@ -12,11 +12,19 @@ def application(environ, start_response):
      x=0
      y=0
      
+<<<<<<< HEAD
      try:
          a, b = int(a), int(b)
          x=a+b
          y=a*b
      except ValueError:
+=======
+     if a.isdigit() and b.isdigit():
+         a, b = int(a), int(b)
+         x=a+b
+         y=a*b
+     else:
+>>>>>>> 477b9fbee0cfb19a6c7cad94718ec54f5472e0d7
          x = -1
          y = -1
      response_body = html % {
